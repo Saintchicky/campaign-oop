@@ -1,0 +1,1 @@
+<p class="text-center">C'est le footer</p>

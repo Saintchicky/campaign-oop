@@ -1,0 +1,6 @@
+DirectoryIndex  index.php
+
+RewriteEngine   On
+
+RewriteRule ^(fr)?/?([a-zA-Z0-9_\-]*)?/?$ index.php?page=$2&%{QUERY_STRING}
+# Pour avoir directement après /le nom de la page au lieu de ?page=campaign
