@@ -6,10 +6,10 @@
         <h2>Création du Questionnaire</h2>
         <br>
         <br>
-    <!-- faire la banderole success -->
+    <!-- faire la banderole success 
     <div class="alert alert-success">
 
-    </div><br/>
+    </div><br/>-->
 
             <form action="" method="post">
             <!-- mettre un token en input caché -->
@@ -17,9 +17,7 @@
                 <label for="question">Question</label>
                 <input type="text" class="form-control" name="question" id="question" placeholder="Créer votre question">
             
-                <input type="hidden" name="id_campaign" id="id_campaign" value="">
 
-                <input type="hidden" name="id_campaign" id="id_campaign" value="">
         
             </div>
             <div class="form-group">
