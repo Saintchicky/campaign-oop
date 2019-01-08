@@ -13,3 +13,5 @@ if(isset($_POST) & !empty($_POST)){
         echo "<div class='alert alert-danger'>La question n'est pas crée</div><br/>";
    }
 }
+	$forms = Campaign::read($id_campaign);
+

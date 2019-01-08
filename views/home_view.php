@@ -31,7 +31,7 @@
                 <tbody>
                     <tr>
                     <th scope="row">1</th>
-                    <td value="{{$score->id_campaign}}">18 points</td>
+                    <td value="#">18 points</td>
                     </tr>
                 </tbody>
                 </table>
