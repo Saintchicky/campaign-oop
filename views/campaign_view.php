@@ -58,6 +58,7 @@
 						<div class="col-md-6">
 							<?php 
 							$form_c = explode('|', $form['score']); 
+
 							$form_r = explode('|', $form['answer']);
 							// explode ne marche pas avec echo, il faut donc séparer les valeurs du tableau manuellement en echo
 							?>

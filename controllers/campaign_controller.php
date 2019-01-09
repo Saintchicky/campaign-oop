@@ -15,3 +15,18 @@ if(isset($_POST) & !empty($_POST)){
 }
 	$forms = Campaign::read($id_campaign);
 
+if(isset($_POST) & !empty($_POST)){
+	foreach($_POST['scoring'] as $score){
+		$resultInput[] = $score;
+	}
+	$result = array_sum($resultInput);
+
+	$res = Result::create($result, $id_campaign);
+	if($res){
+		header('location:home');
+		echo "Succès";
+	}else{
+		echo "Une erreur est arrivée";
+	}
+}
+

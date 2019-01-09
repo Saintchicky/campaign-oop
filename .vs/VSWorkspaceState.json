@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\controllers",
+    "\\views",
+    "\\_classes"
   ],
+  "SelectedNode": "\\_classes\\Db.php",
   "PreviewInSolutionExplorer": false
 }
