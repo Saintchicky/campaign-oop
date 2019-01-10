@@ -73,9 +73,8 @@
 
                             for($i = 0; $i < $size; $i++)
                             {
-                               foreach ($form_gene[$i] as $keys => $value){
-                                
-                                     debug($value);
+                               foreach ($form_gene as $keys => $value){
+
 
 							// explode ne marche pas avec echo, il faut donc séparer les valeurs du tableau manuellement en echo
 							?>
@@ -84,7 +83,8 @@
 								<input type="hidden" name="id_campaign" id="id_campaign" value="">
 								<input type="checkbox" id="scoring" name="scoring[]" value="<?= $form_c[1]; ?>">
 								<label for="<?= $form_r[1]; ?>"><?= $form_r[1]; ?></label>	-->	
-
+								 <input type="checkbox" id="scoring" name="scoring[]" value="<?= $value[$i]; ?>">
+								 <label for="<?= $form_r[0]; ?>"><?= $value[$i]; ?></label>
 
 							 <?php 
                            
@@ -97,7 +97,7 @@
 					</div>
 				<hr style="width:100%">
 				
-				<?php  ?>
+				<?php endforeach; ?>
 				</div>
         </div>
     </div>
