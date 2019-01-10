@@ -15,6 +15,9 @@ if(isset($_POST) & !empty($_POST)){
 }
 	$forms = Campaign::read($id_campaign);
 
+	
+					
+
 if(isset($_POST) & !empty($_POST)){
 	foreach($_POST['scoring'] as $score){
 		$resultInput[] = $score;
