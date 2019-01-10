@@ -60,11 +60,23 @@
 						<div class="col-md-6">
 							<?php 
 							$form_c = explode('|', $form['score']); 
-							$id_c = array_count_values( $forms);
-							debug($id_c);
-							
-							
+						
+						   
 							$form_r = explode('|', $form['answer']);
+                  
+
+                            $form_gene = [$form_c,$form_r];
+                          
+                            $size = count($form_gene);
+                            
+                            $keys = key($form_gene);
+
+                            for($i = 0; $i < $size; $i++)
+                            {
+                               foreach ($form_gene[$i] as $keys => $value){
+                                
+                                     debug($value);
+
 							// explode ne marche pas avec echo, il faut donc séparer les valeurs du tableau manuellement en echo
 							?>
 								<!-- <input type="checkbox" id="scoring" name="scoring[]" value="<?= $form_c[0]; ?>">
@@ -72,18 +84,20 @@
 								<input type="hidden" name="id_campaign" id="id_campaign" value="">
 								<input type="checkbox" id="scoring" name="scoring[]" value="<?= $form_c[1]; ?>">
 								<label for="<?= $form_r[1]; ?>"><?= $form_r[1]; ?></label>	-->	
-							<?php foreach($form_c as $index => $for_c): ?>
-							 <input type="checkbox" id="scoring" name="scoring[]" value="<?= $for_c; ?>">
-							 <?php foreach ($form_r as $index => $for_r): ?>
-							 <label for="<?= $for_r; ?>"><?= $for_r; ?></label>
-							 <?php endforeach; ?>
-							<?php endforeach; ?>
+
+
+							 <?php 
+                           
+                            }
+                             }
+                               ?>
+						
 
 			</form>
 					</div>
 				<hr style="width:100%">
 				
-				<?php endforeach; ?>
+				<?php  ?>
 				</div>
         </div>
     </div>

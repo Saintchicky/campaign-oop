@@ -17,7 +17,7 @@ class Campaign
 	{
 		global $db;
 			$sql = "SELECT * FROM `question_answers`";
-			if($id_campaign){ $sql .= " WHERE id_campaign=$id_campaign  LIMIT 1";}
+			if($id_campaign){ $sql .= " WHERE id_campaign=$id_campaign";}
 			$res = $db->fetch($sql,[],true);
  		return $res;
 	}
