@@ -6,7 +6,7 @@
             <br>
             <br>
 
-        <?php foreach($title as $index => $camp): ?>
+        <?php foreach($title as $camp): ?>
         <a href="campaign?id=<?php echo $camp['id']; ?>" type="button" class="btn btn-primary"><?=$camp['title'];?></a> 
         <?php endforeach; ?>
         
@@ -20,22 +20,29 @@
 <section>
     <div class="container">
         <div class="row d-flex justify-content-center">
+
+		<?php foreach($score as $result): ?>
             <div class="col-md-4"> 
                 <table class="table">
                 <thead>
                     <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Campagne 1</th>  
+                    <th scope="col"><?= $result['title']; ?></th>  
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                    <th scope="row">1</th>
-                    <td value="#">18 points</td>
+					
+                    <th scope="row"><?= $result['id']; ?></th>
+                    <td value="#"><?= $result['result']; ?></td>
+					
                     </tr>
                 </tbody>
                 </table>
             </div>
+
+			<?php endforeach; ?>
+
         </div>
     </div>
 </section>

@@ -21,4 +21,15 @@ class Campaign
 			$res = $db->fetch($sql,[],true);
  		return $res;
 	}
+	static function update($question, $answer, $score, $id)
+	{
+		global $db;
+		$sql = "UPDATE `question_answers` SET question='$question', answer='$answer', score='$answer' WHERE id=$id";
+		$res = $db->exec($sql);
+		if($res){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
