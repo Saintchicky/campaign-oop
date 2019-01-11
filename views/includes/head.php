@@ -26,7 +26,8 @@
 
 
 <!-- JS Files -->
-
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/script.js"></script>
 
     <title><?= ucfirst($page) ?></title> 
     <!-- afficher dynamiquement le nom de la page -->
