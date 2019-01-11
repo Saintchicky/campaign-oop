@@ -1,24 +1,22 @@
 <?php
 
 $id_campaign = $_GET['id'];
-if(isset($_POST) & !empty($_POST)){
+if(isset($_POST['create']) & !empty($_POST)){
     $question = str_secur($_POST['question']); 
     $answer = str_secur($_POST['answer']);
     $score = str_secur($_POST['score']);
    $res = Campaign::create($question, $answer, $score, $id_campaign);
 
    if($res){
-        echo "<div class='alert alert-success'>La question vient dêtre crée</div><br/>";
+        echo "<div class='alert alert-success'>La question vient dï¿½tre crï¿½e</div><br/>";
    }else{
-        echo "<div class='alert alert-danger'>La question n'est pas crée</div><br/>";
+        echo "<div class='alert alert-danger'>La question n'est pas crï¿½e</div><br/>";
    }
 }
 	$forms = Campaign::read($id_campaign);
 
 	
-					
-
-if(isset($_POST) & !empty($_POST)){
+if(isset($_POST['score_create']) & !empty($_POST)){ // nommer avec un name les boutons submit afin d'Ã©viter les conflits
 	foreach($_POST['scoring'] as $score){
 		$resultInput[] = $score;
 	}
@@ -27,9 +25,9 @@ if(isset($_POST) & !empty($_POST)){
 	$res = Result::create($result, $id_campaign);
 	if($res){
 		header('location:home');
-		echo "Succès";
+		echo "Succï¿½s";
 	}else{
-		echo "Une erreur est arrivée";
+		echo "Une erreur est arrivï¿½e";
 	}
 }
 

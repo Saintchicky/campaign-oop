@@ -30,7 +30,7 @@
                 <input type="text" class="form-control" name="score" id="score" placeholder="Attribuer vos points">
                 <small id="scoreHelp" class="form-text text-muted">Mettre des "|" entre chaque point</small>
             </div>
-            <button type="submit" class="btn btn-primary">Envoyer</button>
+            <button type="submit" name="create" class="btn btn-primary">Envoyer</button>
         </form>
     </div>
 </section>
@@ -45,7 +45,7 @@
             <form action="#" method="post">
 				<!-- mettre un token en input caché -->
 				<h3>Le Questionnaire <a href="#" id="ajaxDatetour" type="button" class="btn btn-outline-info">Modifier</a>
-				<span>     <button type="submit" class="btn btn-primary">Envoyer</button></span>
+				<span>     <button type="submit" name="score_create" class="btn btn-primary">Envoyer</button></span>
 				</h3>
 				<br>
 					<div class="row">
@@ -59,38 +59,15 @@
 						</div>
 						<div class="col-md-6">
 							<?php 
-							$form_c = explode('|', $form['score']); 
-						
-						   
-							$form_r = explode('|', $form['answer']);
-                  
-
-                            $form_gene = [$form_c,$form_r];
-                          
-                            $size = count($form_gene);
-                            
-                            $keys = key($form_gene);
-
-                            for($i = 0; $i < $size; $i++)
-                            {
-                               foreach ($form_gene as $keys => $value){
-
-
-							// explode ne marche pas avec echo, il faut donc séparer les valeurs du tableau manuellement en echo
+							$form_c = explode('|', $form['score']); 								   
+                            $form_r = explode('|', $form['answer']);            
 							?>
-								<!-- <input type="checkbox" id="scoring" name="scoring[]" value="<?= $form_c[0]; ?>">
-								<label for="<?= $form_r[0]; ?>"><?= $form_r[0]; ?></label>
-								<input type="hidden" name="id_campaign" id="id_campaign" value="">
-								<input type="checkbox" id="scoring" name="scoring[]" value="<?= $form_c[1]; ?>">
-								<label for="<?= $form_r[1]; ?>"><?= $form_r[1]; ?></label>	-->	
-								 <input type="checkbox" id="scoring" name="scoring[]" value="<?= $value[$i]; ?>">
-								 <label for="<?= $form_r[0]; ?>"><?= $value[$i]; ?></label>
-
-							 <?php 
-                           
-                            }
-                             }
-                               ?>
+							
+                            <?php foreach($form_c as $key => $for_c): 
+                                $for_r = $form_r[$key]; //déclarer après pour looper un deuxième tableau afin d'éviter les répétitions ?>   
+                            <input type="checkbox" id="scoring" name="scoring[]" value="<?= $for_c; ?>">
+                            <label for="<?= $for_r; ?>"><?= $for_r; ?></label>
+							<?php endforeach; ?>
 						
 
 			</form>
