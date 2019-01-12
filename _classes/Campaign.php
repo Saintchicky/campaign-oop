@@ -24,12 +24,24 @@ class Campaign
 	static function update($question, $answer, $score, $id)
 	{
 		global $db;
-		$sql = "UPDATE `question_answers` SET question='$question', answer='$answer', score='$answer' WHERE id=$id";
+		$sql = "UPDATE `question_answers` SET question='$question', answer='$answer', score='$score' WHERE id=$id";
 		$res = $db->exec($sql);
 		if($res){
 			return true;
 		}else{
 			return false;
 		}
+	}
+	static function delete ($id)
+	{
+		global $db; 
+		$sql = "DELETE FROM `question_answers` WHERE id=$id";
+		$res = $db->exec($sql);
+		if($res){
+			return true;
+		}else{
+			return false;
+		}
+
 	}
 }

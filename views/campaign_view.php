@@ -44,7 +44,7 @@
 
             <form action="#" method="post">
 				<!-- mettre un token en input caché -->
-				<h3>Le Questionnaire <a href="#" id="ajaxDatetour" type="button" class="btn btn-outline-info">Modifier</a>
+				<h3>Le Questionnaire <a href="update?id=<?php echo $id_campaign; ?>" id="ajaxDatetour" type="button" class="btn btn-outline-info">Modifier</a>
 				<span>     <button type="submit" name="score_create" class="btn btn-primary">Envoyer</button></span>
 				</h3>
 				<br>
@@ -60,7 +60,7 @@
 						<div class="col-md-6">
 							<?php 
 							$form_c = explode('|', $form['score']); 								   
-                            $form_r = explode('|', $form['answer']);            
+                            $form_r = explode('|', $form['answer']);  		
 							?>
 							
                             <?php foreach($form_c as $key => $for_c): 

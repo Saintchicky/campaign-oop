@@ -40,7 +40,7 @@ $(document).ready(function () {
                         answer: $('#answer_d[data-id="' + id + '"]').val(),
                         score: $('#score_d[data-id="' + id + '"]').val()
                     };
-                    var url = "/post/update/" + id;
+                    var url = "update?id=" + id;
                     // console.log(form,data, url);
                     $.ajax({
                         type: form.attr('method'),

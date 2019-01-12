@@ -1,10 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\assets",
+    "\\assets\\js",
     "\\controllers",
     "\\views",
+    "\\views\\includes",
     "\\_classes"
   ],
-  "SelectedNode": "\\_classes\\Campaign.php",
+  "SelectedNode": "\\views\\includes\\head.php",
   "PreviewInSolutionExplorer": false
 }
