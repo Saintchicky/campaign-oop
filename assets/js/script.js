@@ -36,12 +36,13 @@ $(document).ready(function () {
 
                     var form = $('form#frm');
                     var data = {
+						id:id,
                         question: $('#question_d[data-id="' + id + '"]').val(),
                         answer: $('#answer_d[data-id="' + id + '"]').val(),
                         score: $('#score_d[data-id="' + id + '"]').val()
                     };
                     var url = "update?id=" + id;
-                    // console.log(form,data, url);
+                  console.log(form,data, url);
                     $.ajax({
                         type: form.attr('method'),
                         url: url,
@@ -53,7 +54,7 @@ $(document).ready(function () {
                                     $('#error-' + control).html(data.errors[control]);
                                 }
                             } else {
-                                document.location.reload();
+                              //document.location.reload();
                             }
                         },
                         error: function (xhr, textStatus, errorThrown) {
