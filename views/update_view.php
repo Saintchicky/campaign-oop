@@ -4,7 +4,9 @@
 <div class="row">
 	<?php foreach($forms as $form): ?>
          <form id="frm" data-id="<?= $form['id']?>" method="POST" class="form-inline">
-		 <input type="hidden" name="id"  id="id_d"  value="<?= $form['id']?>" data-id="<?= $form['id']?>">
+     <input type="hidden" name="id"  id="id_d"  value="<?= $form['id']?>" data-id="<?= $form['id']?>">
+       <input type="hidden" name="id_campaign" value="<?= $form['id_campaign']?>">
+     
 
           <div class="input-group">
             <label for="question">Question</label>

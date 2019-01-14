@@ -1,5 +1,18 @@
 <?php include_once 'views/includes/head.php';?>
-
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <?php foreach($campaigns as $title): ?>
+                <h1><?= $title['title']?> <span><a  class="btn btn-primary" href="/campaign_oop" type="button">Retour</a></span></h1>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<hr>
+<br>
 <section>
     <div class="container">
     <br>
@@ -50,10 +63,7 @@
 				<br>
 					<div class="row">
 						
-						<?php 
-						
-						foreach($forms as $index => $form): ?>
-
+						<?php foreach($forms as $index => $form): ?>
 						<div class="col-md-6">
 							<p><?= $form['question']; ?></p>
 						</div>

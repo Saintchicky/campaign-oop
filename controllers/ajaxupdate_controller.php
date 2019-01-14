@@ -9,8 +9,7 @@ if(isset($_POST) & !empty($_POST)){
 
     $res = Campaign::update($question, $answer, $score, $id);
     if($res){
-    // header('location: home');
-        echo "Succ�s";
+        echo "Succès";
     }else{
         echo "Echec";
     }
