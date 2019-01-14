@@ -31,22 +31,17 @@ $(document).ready(function () {
                 $("#content").html(data);
 
                 $(document).on('click', 'button[data-id]', function (e) {
-
-                    let id = $(this).data('id');
+       
+                    let id_camp = $(this).data('id');
 
                     var form = $('form#frm');
-                    var data = {
-						id:id,
-                        question: $('#question_d[data-id="' + id + '"]').val(),
-                        answer: $('#answer_d[data-id="' + id + '"]').val(),
-                        score: $('#score_d[data-id="' + id + '"]').val()
-                    };
-                    var url = "update?id=" + id;
-                  console.log(form,data, url);
-                    $.ajax({
+        
+                    var url = "ajaxupdate";
+                  //console.log(form,data);
+                    $.ajax({  
                         type: form.attr('method'),
                         url: url,
-                        data: data,
+                        data: $('#frm[data-id="' + id_camp + '"]').serialize(), // // rajouter un data id pour l'ajax multiple et serialize pour envoyer dans la super globale $_POST à cause de l'ajax
                         cache: false,
                         success: function (data) {
                             if (data.fail) {
@@ -54,7 +49,8 @@ $(document).ready(function () {
                                     $('#error-' + control).html(data.errors[control]);
                                 }
                             } else {
-                              //document.location.reload();
+                                console.log(form,data,url);
+                              document.location.reload();
                             }
                         },
                         error: function (xhr, textStatus, errorThrown) {

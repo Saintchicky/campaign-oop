@@ -23,6 +23,7 @@ class Campaign
 	}
 	static function update($question, $answer, $score, $id)
 	{
+		debug($id);
 		global $db;
 		$sql = "UPDATE `question_answers` SET question='$question', answer='$answer', score='$score' WHERE id=$id";
 		$res = $db->exec($sql);
