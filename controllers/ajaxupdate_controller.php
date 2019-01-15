@@ -9,6 +9,7 @@ if(isset($_POST) & !empty($_POST)){
 
     $res = Campaign::update($question, $answer, $score, $id);
     if($res){
+	 $_SESSION['update_question'] = "<div class='alert alert-success'>La question a été mise à jour</div>";
         echo "Succès";
     }else{
         echo "Echec";

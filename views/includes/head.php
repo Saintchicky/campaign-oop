@@ -22,6 +22,7 @@
 <!-- CSS Styles -->
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="assets/styles/css/style.css"/>
 <!-- <link rel="stylesheet" href="assets/styles/css/styles.css"/> -->
 
 

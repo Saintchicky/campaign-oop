@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     //------------------Alert-----------------------
 
-    $(".alert").fadeOut(3000);
+   $(".alert").fadeOut(9000);
 
     // -----------------token ----------------------
 
@@ -12,7 +12,26 @@ $(document).ready(function () {
         }
     });
 
+    //-----------------Check box one time per row----------------------
 
+
+    $("input:checkbox").on('click', function () {
+        // in the handler, 'this' refers to the box clicked on
+        var $box = $(this);
+        if ($box.is(":checked")) {
+            // the name of the box is retrieved using the .attr() method
+            // as it is assumed and expected to be immutable
+            var group = "input:checkbox[data-check='" + $box.attr("data-check") + "']";
+            // the checked state of the group/box on the other hand will change
+            // and the current value is retrieved using .prop() method
+            $(group).prop("checked", false);
+            $box.prop("checked", true);
+        } else {
+            $box.prop("checked", false);
+        }
+    });
+
+    //------------------Ajax Update-------------------------------
 
     $('#ajaxDatetour').on('click', function (event) {
         event.preventDefault();
