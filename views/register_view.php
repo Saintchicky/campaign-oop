@@ -3,6 +3,7 @@
 <br>
 <section>
 	<div class="container">
+
 		<div class="row d-flex justify-content-center">
 			<div class="col-md-6">
 					<form id="register-form" action="#" method="post" role="form">
