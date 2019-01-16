@@ -1,14 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
+    "\\assets\\js",
     "\\assets\\styles",
     "\\assets\\styles\\css",
-    "\\controllers",
-    "\\views",
-    "\\views\\includes",
-    "\\_classes"
+    "\\views\\includes"
   ],
-  "SelectedNode": "\\views\\includes\\head.php",
   "PreviewInSolutionExplorer": false
 }

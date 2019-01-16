@@ -26,3 +26,11 @@ id_campaign INT(11),
 CONSTRAINT pk_id_results PRIMARY KEY (id),
 FOREIGN KEY (id_campaign) REFERENCES campaigns(id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+CREATE TABLE users(
+id INT NOT NULL AUTO_INCREMENT,
+email VARCHAR(255) NOT NULL,
+pass VARCHAR(255) NOT NULL,
+save_date TIMESTAMP NOT NULL,
+CONSTRAINT pk_id_users PRIMARY KEY (id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
