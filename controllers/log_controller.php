@@ -1,11 +1,12 @@
 <?php
 
 if (isset($_POST['connect']) & !empty($_POST) ) {
+
 		$username = $_POST['username'];
 	
-	//  Récupération de l'utilisateur et de son pass hashé
+	//  Rï¿½cupï¿½ration de l'utilisateur et de son pass hashï¿½
 		$result = Log::Read($username);
-	// Comparaison du pass envoyé via le formulaire avec la base
+	// Comparaison du pass envoyï¿½ via le formulaire avec la base
 
 	$isPasswordCorrect = password_verify($_POST['pass'], $result['pass']);
 	
@@ -18,8 +19,8 @@ if (isset($_POST['connect']) & !empty($_POST) ) {
 		{
 
         $_SESSION['username'] = $username;
-
-        echo 'Vous êtes connecté !';
+		header('location:home');
+        echo 'Vous ï¿½tes connectï¿½ !';
 		}else{
 			 echo 'Mauvais identifiant ou mot de passe !';
 		}
