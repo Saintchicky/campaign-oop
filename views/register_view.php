@@ -3,7 +3,6 @@
 <br>
 <section>
 	<div class="container">
-
 		<div class="row d-flex justify-content-center">
 			<div class="col-md-6">
 					<form id="register-form" action="#" method="post" role="form">
@@ -19,13 +18,11 @@
 											<div class="form-group">
 												<input type="password" name="pass" id="pass" tabindex="2" class="form-control" placeholder="Confirmer le Mot de Passe" required>
 													<?php
-		if(isset($_SESSION['not_confrim'])):
-		echo $_SESSION['not_confrim'];
-		unset($_SESSION['not_confrim']);
-		endif;
-	?>
-												 <small id="answerHelp" class="form-text text-muted"></small>
-
+														if(isset($_SESSION['not_confrim'])):
+														echo $_SESSION['not_confrim'];
+														unset($_SESSION['not_confrim']);
+														endif;
+													?>
 											</div>
 											<div class="form-group">
 												<div class="row justify-content-center">

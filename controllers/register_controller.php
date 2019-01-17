@@ -14,7 +14,8 @@
 
 				$res = Register::create($username, $email, $pass);
 				if($res){
-					echo "Succès";
+				header('location: log');
+				 $_SESSION['session_success'] = "<div class='alert alert-success'>La session a été crée avec succès, vous pouvez vous connecter</div>";
 				}else{
 					echo"Problème";
 				}
