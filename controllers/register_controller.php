@@ -5,7 +5,7 @@
 				$pass_c = trim($_POST['pass']);
 
 				if($pass_first != $pass_c){
-				 $_SESSION['not_confrim'] = 'le mot de passe ne correspond pas';
+				 $_SESSION['not_confrim'] = "<small id='answerHelp' class='form-text error'>Le mot de passe ne correspond pas</small>";
 				}else{
 
 				$username = str_secur($_POST['username']);

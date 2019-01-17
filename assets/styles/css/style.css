@@ -3,3 +3,6 @@
     left: 20%; /*En absolute il faut utiliser left and right pour avoir la largeur qu'on souhaite*/
     right: 20%;
 }
+.error{
+	color:red;
+}

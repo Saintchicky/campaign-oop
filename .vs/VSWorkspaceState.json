@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets\\js",
-    "\\assets\\styles",
-    "\\assets\\styles\\css",
+    "\\controllers",
+    "\\views",
     "\\views\\includes"
   ],
+  "SelectedNode": "\\views\\register_view.php",
   "PreviewInSolutionExplorer": false
 }

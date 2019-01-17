@@ -18,6 +18,13 @@
 											</div>
 											<div class="form-group">
 												<input type="password" name="pass" id="pass" tabindex="2" class="form-control" placeholder="Confirmer le Mot de Passe" required>
+													<?php
+		if(isset($_SESSION['not_confrim'])):
+		echo $_SESSION['not_confrim'];
+		unset($_SESSION['not_confrim']);
+		endif;
+	?>
+												 <small id="answerHelp" class="form-text text-muted"></small>
 
 											</div>
 											<div class="form-group">
