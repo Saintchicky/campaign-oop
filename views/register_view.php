@@ -14,15 +14,16 @@
 												<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Courriel" required>
 											</div>
 											<div class="form-group">
-												<input type="password" name="pass" id="pass" tabindex="2" class="form-control" placeholder="Mot de passe" required>
+												<input type="password" name="pass_first" id="pass_first" tabindex="2" class="form-control" placeholder="Mot de passe" required>
 											</div>
-											<!-- <div class="form-group">
-												<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirmer le Mot de Passe" required>
-											</div> -->
+											<div class="form-group">
+												<input type="password" name="pass" id="pass" tabindex="2" class="form-control" placeholder="Confirmer le Mot de Passe" required>
+
+											</div>
 											<div class="form-group">
 												<div class="row justify-content-center">
 													<div class="col-sm-6 col-sm-offset-3">
-														<input type="submit" name="register" id="register" tabindex="1" class="form-control btn btn-success" value="Enregistrer">
+														<input type="submit" name="register" id="register" tabindex="1" class="form-control btn btn-success" value="S'inscrire">
 													</div>
 												</div>
 											</div>

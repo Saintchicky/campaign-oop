@@ -1,14 +1,22 @@
 <?php
 
-if(isset($_POST['register']) & !empty($_POST)){
-    $username = str_secur($_POST['username']);
-    $email = str_secur($_POST['email']);
-    $pass = str_secur(password_hash($_POST['pass'],PASSWORD_DEFAULT));
+		if(isset($_POST['register']) & !empty($_POST)){
+				$pass_first = trim($_POST['pass_first']);
+				$pass_c = trim($_POST['pass']);
 
-    $res = Register::create($username, $email, $pass);
-    if($res){
-        echo "Succès";
-    }else{
-        echo"Problème";
-    }
-}
+				if($pass_first != $pass_c){
+				 $_SESSION['not_confrim'] = 'le mot de passe ne correspond pas';
+				}else{
+
+				$username = str_secur($_POST['username']);
+				$email = str_secur($_POST['email']);
+				$pass = str_secur(password_hash($_POST['pass'],PASSWORD_DEFAULT));
+
+				$res = Register::create($username, $email, $pass);
+				if($res){
+					echo "Succès";
+				}else{
+					echo"Problème";
+				}
+			}
+		}
