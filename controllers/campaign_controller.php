@@ -2,6 +2,7 @@
 
 $id_campaign = $_GET['id'];
 $campaigns = Home::read($id_campaign);
+
 if(isset($_POST['create']) & !empty($_POST)){
     $question = str_secur($_POST['question']); 
     $answer = str_secur($_POST['answer']);
