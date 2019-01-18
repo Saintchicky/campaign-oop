@@ -1,4 +1,5 @@
 <?php include_once 'views/includes/head.php';?>
+<?php include_once 'views/includes/header.php';?>
 <br>
 <section>
     <div class="container">
