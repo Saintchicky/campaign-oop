@@ -33,7 +33,7 @@
 										<div class="row">
 											<div class="col-lg-12">
 												<div class="text-center">
-													<a href="#" tabindex="5" class="forgot-password">Mot de passe oublié ?</a>
+													<a href="#" tabindex="5" class="forgot-password">Mot de passe oubliï¿½ ?</a>
 												</div>
 											</div>
 										</div>
@@ -43,7 +43,7 @@
 									<?php
 														if(isset($_SESSION['username'])):
 														echo $_SESSION['username'];
-														unset($_SESSION['username']);
+											
 														endif;
 													?>
 </div>

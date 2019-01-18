@@ -20,9 +20,8 @@ if (isset($_POST['connect']) & !empty($_POST) ) {
 
         $_SESSION['username'] = $username;
 		header('location:home');
-        echo 'Vous �tes connect� !';
 		}else{
-			 echo 'Mauvais identifiant ou mot de passe !';
+			header('location:log');
 		}
 	}
 

@@ -2,7 +2,7 @@
 <br>
 <section>
     <div class="container">
-            <h1>Les campagnes</h1>
+            <h1>Les campagnes <a href="/campaign_oop/logout.php" type="button" class="btn btn-primary">Déconnection</a></h1>
             <br>
             <br>
 
