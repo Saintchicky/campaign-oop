@@ -1,4 +1,5 @@
 <?php include_once 'views/includes/head.php';?>
+<?php include_once 'views/includes/header.php';?>
 <section>
     <div class="container">
         <div class="row">
@@ -16,7 +17,6 @@
     <br>
     <h2>Création du Questionnaire</h2> 
 	<br>
-
 	<div class='alert alert-success' style="display:none;">La question vient d'être crée</div>
 	<?php
 		if(isset($_SESSION['create_question'])):
@@ -66,7 +66,7 @@
 				<?php
 					if(isset($_SESSION['update_question'])):
 					echo $_SESSION['update_question'];
-					unset($_SESSION['update_question']);
+					unset($_SESSION['update_question']); // vide le cache cookies à chaque rafraichissement
 					endif;
 					if(isset($_SESSION['delete_question'])):
 					echo $_SESSION['delete_question'];

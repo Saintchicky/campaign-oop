@@ -33,19 +33,12 @@
 										<div class="row">
 											<div class="col-lg-12">
 												<div class="text-center">
-													<a href="#" tabindex="5" class="forgot-password">Mot de passe oubli� ?</a>
+													<a href="#" tabindex="5" class="forgot-password">Mot de passe oublié ?</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</form>
-
-									<?php
-														if(isset($_SESSION['username'])):
-														echo $_SESSION['username'];
-											
-														endif;
-													?>
 </div>
 </div>
 </section>
