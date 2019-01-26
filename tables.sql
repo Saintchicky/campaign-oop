@@ -35,3 +35,23 @@ pass VARCHAR(255) NOT NULL,
 save_date TIMESTAMP NOT NULL,
 CONSTRAINT pk_id_users PRIMARY KEY (id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+
+AlTER TABLE campaigns
+  ADD id_user INT(11);
+
+AlTER TABLE campaigns
+ADD FOREIGN KEY (id_user) REFERENCES users(id);
+
+AlTER TABLE question_answers
+  ADD id_user INT(11);
+
+AlTER TABLE question_answers
+ADD FOREIGN KEY (id_user) REFERENCES users(id);
+
+AlTER TABLE results
+  ADD id_user INT(11);
+
+AlTER TABLE results
+ADD FOREIGN KEY (id_user) REFERENCES users(id);
+
