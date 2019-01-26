@@ -6,6 +6,9 @@
 														echo $_SESSION['session_success'];
 														unset($_SESSION['session_success']);
 														endif;
+
+														debug($_COOKIE);
+														debug($_SESSION['username']);
 													?>
 <section>
 <div class="container">

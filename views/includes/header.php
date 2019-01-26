@@ -5,12 +5,12 @@
               &#9776;
           </button>
           <div class="collapse navbar-collapse" id="exCollapsingNavbar">
-              <ul class="navbar-nav mr-auto">
+              <!-- <ul class="navbar-nav mr-auto">
                   <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                   <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
                   <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
                   <li class="nav-item"><a href="#" class="nav-link">More</a></li>
-              </ul>
+              </ul> -->
               <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
                   <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
                   <li class="dropdown order-1">
