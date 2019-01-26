@@ -10,7 +10,7 @@ if (isset($_POST['connect']) & !empty($_POST) ) {
 
 		$id = $result['id'].'------';
 		$pass = $result['pass'];
-		$secret = sha1($username.$pass); // pour crypter l'username et mdp
+		$secret = sha1($username.$pass.$_SERVER['REMOTE_ADDR']); // pour crypter l'username et mdp et récupère l'adresse ip de l'utilisateur
 		$cookie_s = $id.$secret;
 
 	// Comparaison du pass envoyé via le formulaire avec la base

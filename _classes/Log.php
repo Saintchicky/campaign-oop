@@ -13,8 +13,10 @@ class Log
 	static function get_user($id)
 	{
 		global $db;
-		$sql = "SELECT id,username,pass FROM `users` WHERE id = '$id'";
+		$sql = "SELECT id,username,pass FROM `users` WHERE id = $id";
+
 		$res = $db->fetch($sql,[],false);
+
 		return $res;
 
 	}

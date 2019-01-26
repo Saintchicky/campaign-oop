@@ -17,6 +17,8 @@ ini_set('session.cookie_lifetime',false);
 
 session_start();
 
+
+
 //----------------------//
 //      Constants       //
 //----------------------//
