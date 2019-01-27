@@ -1,6 +1,7 @@
 <?php
 if(isset($_SESSION['username'])){
 	$id_campaign = $_GET['id'];
+	$id_user = $_SESSION['id_user'];
 	$campaigns = Home::read($id_campaign);
 
 	if(isset($_POST['create']) & !empty($_POST)){
@@ -16,7 +17,7 @@ if(isset($_SESSION['username'])){
 			echo "<div class='alert alert-danger'>La question n'est pas crée</div><br/>";
 	}
 	}
-		$forms = Campaign::read($id_campaign);
+		$forms = Campaign::read($id_campaign,$id_user);
 
 		
 	if(isset($_POST['score_create']) & !empty($_POST)){ // nommer avec un name les boutons submit afin d'éviter les conflits

@@ -13,11 +13,11 @@ class Campaign
 			return false;
 		}
 	}
-	static function read($id_campaign)
+	static function read($id_campaign,$id_user)
 	{
 		global $db;
 			$sql = "SELECT * FROM `question_answers`";
-			if($id_campaign){ $sql .= " WHERE id_campaign=$id_campaign";}
+			if($id_campaign){ $sql .= " WHERE id_campaign=$id_campaign AND id_user=$id_user";}
 			$res = $db->fetch($sql,[],true);
  		return $res;
 	}

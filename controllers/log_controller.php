@@ -8,10 +8,10 @@ if (isset($_POST['connect']) & !empty($_POST) ) {
 	//  R�cup�ration de l'utilisateur et de son pass hash�
 
 
-		$id = $result['id'].'------';
+		$id = $result['id'];
 		$pass = $result['pass'];
 		$secret = sha1($username.$pass.$_SERVER['REMOTE_ADDR']); // pour crypter l'username et mdp et récupère l'adresse ip de l'utilisateur
-		$cookie_s = $id.$secret;
+		$cookie_s = $id.'------'.$secret;
 
 	// Comparaison du pass envoyé via le formulaire avec la base
 	$isPasswordCorrect = password_verify($_POST['pass'], $result['pass']);
@@ -34,9 +34,8 @@ if (isset($_POST['connect']) & !empty($_POST) ) {
 	
 		}
 		$_SESSION['username'] = $username;
-		$_SESSION['pass'] = $pass;
-		
-		header('location:home');
+
+		header('location:home?id='.$id);
 		}else{
 			header('location:log');
 		}

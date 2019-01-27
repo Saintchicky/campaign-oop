@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-12">
                 <?php foreach($campaigns as $title): ?>
-                <h1><?= $title['title']?> <span><a  class="btn btn-primary" href="/campaign-oop/" type="button">Retour</a></span></h1>
+                <h1><?= $title['title']?> <span><a  class="btn btn-primary" href="/campaign-oop/home?id=<?= $id_user ?>" type="button">Retour</a></span></h1>
                 <?php endforeach; ?>
             </div>
         </div>
