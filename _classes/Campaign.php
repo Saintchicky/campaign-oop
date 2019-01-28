@@ -2,11 +2,10 @@
 
 class Campaign 
 {
-	static function create ($question, $answer, $score, $id_campaign)
+	static function create ($question, $answer, $score, $id_campaign, $id_user)
 	{
 		global $db;
-
-		$res = $db->exec("INSERT INTO `question_answers` (question, answer, score, id_campaign) VALUES ('$question','$answer','$score','$id_campaign')");
+		$res = $db->exec("INSERT INTO `question_answers` (question, answer, score, id_campaign, id_user) VALUES ('$question','$answer','$score','$id_campaign','$id_user')");
 		if($res){
 			return true;
 		}else{
@@ -23,7 +22,6 @@ class Campaign
 	}
 	static function update($question, $answer, $score, $id)
 	{
-		debug($id);
 		global $db;
 		$sql = "UPDATE `question_answers` SET question='$question', answer='$answer', score='$score' WHERE id=$id";
 		$res = $db->exec($sql);

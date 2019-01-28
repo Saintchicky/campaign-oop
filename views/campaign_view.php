@@ -28,11 +28,12 @@
 		<br>
         <br>
 		<br>
-            <form action="" method="post">
+            <form method="post">
             <!-- mettre un token en input caché -->
             <div class="form-group">
                 <label for="question">Question</label>
-                <input type="text" class="form-control" name="question" id="question" placeholder="Créer votre question" required>
+				<input type="text" class="form-control" name="question" id="question" placeholder="Créer votre question" required>
+				<input type="hidden" name="id_user" value="<?= $id_user ?>">
 
             </div>
             <div class="form-group">
@@ -96,7 +97,7 @@
                             <label for="<?= $for_r; ?>"><?= $for_r; ?></label>
 							<?php endforeach; ?>
 						
-
+			<input type="hidden" name="id_user" value="<?= $id_user ?>">
 			</form>
 					</div>
 				<hr style="width:100%">

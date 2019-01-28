@@ -8,7 +8,8 @@ if(isset($_SESSION['username'])){
 		$question = str_secur($_POST['question']); 
 		$answer = str_secur($_POST['answer']);
 		$score = str_secur($_POST['score']);
-	$res = Campaign::create($question, $answer, $score, $id_campaign);
+		$id_user = str_secur($_POST['id_user']);
+	$res = Campaign::create($question, $answer, $score, $id_campaign, $id_user);
 
 	if($res){
 	// header('location:campaign?id='.$id_campaign.'status=success');
@@ -28,9 +29,9 @@ if(isset($_SESSION['username'])){
 		}
 		$result = array_sum($resultInput);
 
-		$res = Result::create($result, $id_campaign);
+		$res = Result::create($result, $id_campaign, $id_user);
 		if($res){
-			header('location:home');
+			header('location:home?id='.$id_user);
 			echo "Succès";
 		}else{
 			echo "Une erreur est arrivée";

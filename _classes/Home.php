@@ -1,6 +1,18 @@
 <?php
 
 class Home {
+
+	static function create($title, $id_user)
+	{
+		global $db;
+		$res = $db->exec("INSERT INTO `campaigns` (title, id_user) VALUES ('$title','$id_user')");
+		if($res){
+			return true;
+		}else{
+			return false;
+		}
+		
+	}
     
     static function read($id_campaign)
     {
