@@ -31,10 +31,12 @@
 </section>
 <br>
 <br>
+<hr>
 <br>
 <br>
 <section>
     <div class="container">
+    <h2>Les Résultats</h2>
         <div class="row d-flex justify-content-center">
 		<?php foreach($score as $result): ?>
             <div class="col-md-4"> 

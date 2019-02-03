@@ -50,6 +50,7 @@ $(document).ready(function () {
                 $("#content").html(data);
 
                 $(document).on('click', 'button[data-id]', function (e) {
+                    // e.preventDefault();
        
                     let id_camp = $(this).data('id');
 
@@ -63,13 +64,15 @@ $(document).ready(function () {
                         data: $('#frm[data-id="' + id_camp + '"]').serialize(), // // rajouter un data id pour l'ajax multiple et serialize pour envoyer dans la super globale $_POST à cause de l'ajax
                         cache: false,
                         success: function (data) {
+                            var id  = $('#id_c').val();
                             if (data.fail) {
                                 for (control in data.errors) {
                                     $('#error-' + control).html(data.errors[control]);
                                 }
                             } else {
-                                console.log(form,data,url);
-                              document.location.reload();
+                                // console.log(form,data,url);
+                               window.location.href ="/campaign-oop/campaign?id="+id; //url de redirection après succès opération
+                            //   document.location.reload();
                             }
                         },
                         error: function (xhr, textStatus, errorThrown) {

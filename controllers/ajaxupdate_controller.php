@@ -10,7 +10,7 @@ if(isset($_SESSION['username'])){
         $res = Campaign::update($question, $answer, $score, $id);
         if($res){
         $_SESSION['update_question'] = "<div class='alert alert-success alert_a'>La question a été mise à jour</div>";
-            echo "Succès";
+        echo "Succès";
         }else{
             echo "Echec";
         }

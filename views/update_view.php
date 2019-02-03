@@ -7,6 +7,7 @@
 				 <form id="frm" data-id="<?= $form['id']?>" method="POST" class="form-inline">
 			 <input type="hidden" name="id"  id="id_d"  value="<?= $form['id']?>" data-id="<?= $form['id']?>">
 			 <input type="hidden" data-id="<?= $form['id']?>" name="id_user" value="<?= $id_user ?>">
+			 	 <input type="hidden" name="id_c"  id="id_c"  value="<?= $form['id_campaign']?>">
 				  <div class="form-group">
 					<label for="question">Question</label>
 					<input type="text" class="form-control" name="question" id="question_d" value="<?= $form['question']; ?>" data-id="<?= $form['id'] ?>" size="25" required>
