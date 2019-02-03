@@ -1,4 +1,4 @@
-.alert {
+.alert_a {
     position: absolute;
     left: 20%; /*En absolute il faut utiliser left and right pour avoir la largeur qu'on souhaite*/
     right: 20%;

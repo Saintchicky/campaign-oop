@@ -13,9 +13,9 @@ if(isset($_SESSION['username'])){
 
 	if($res){
 	// header('location:campaign?id='.$id_campaign.'status=success');
-		$_SESSION['create_question'] = "<div class='alert alert-success'>La question vient d'être crée</div>";
+		$_SESSION['create_question'] = "<div class='alert alert-success alert_a'>La question vient d'être crée</div>";
 	}else{
-			echo "<div class='alert alert-danger'>La question n'est pas crée</div><br/>";
+			echo "<div class='alert alert-danger alert_a'>La question n'est pas crée</div><br/>";
 	}
 	}
 		$forms = Campaign::read($id_campaign,$id_user);
