@@ -42,6 +42,7 @@ class Db{
      * @param array|null $values Optional values
      * @return bool Result of the request
      */
+    // Self c'est la class elle-même donc Db
     public function execute($request, $values = array()){
         $results = self::exec($request, $values);
         return ($results) ? true : false;
