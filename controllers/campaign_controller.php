@@ -9,18 +9,17 @@ if(isset($_SESSION['username'])){
 		$answer = str_secur($_POST['answer']);
 		$score = str_secur($_POST['score']);
 		$id_user = str_secur($_POST['id_user']);
-	$res = Campaign::create($question, $answer, $score, $id_campaign, $id_user);
+		$res = Campaign::create($question, $answer, $score, $id_campaign, $id_user);
 
-	if($res){
-	// header('location:campaign?id='.$id_campaign.'status=success');
-		$_SESSION['create_question'] = "<div class='alert alert-success alert_a'>La question vient d'être crée</div>";
-	}else{
-			echo "<div class='alert alert-danger alert_a'>La question n'est pas crée</div><br/>";
+		if($res){
+		// header('location:campaign?id='.$id_campaign.'status=success');
+			$_SESSION['create_question'] = "<div class='alert alert-success alert_a'>La question vient d'être crée</div>";
+		}else{
+				echo "<div class='alert alert-danger alert_a'>La question n'est pas crée</div><br/>";
+		}
 	}
-	}
-		$forms = Campaign::read($id_campaign,$id_user);
-
-		
+	$forms = Campaign::read($id_campaign,$id_user);
+	
 	if(isset($_POST['score_create']) & !empty($_POST)){ // nommer avec un name les boutons submit afin d'éviter les conflits
 		foreach($_POST['scoring'] as $score){
 			

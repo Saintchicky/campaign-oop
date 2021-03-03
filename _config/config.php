@@ -54,5 +54,6 @@ define("WEBSITE_FACEBOOK_IMAGE", "");
 define("DATABASE_HOST", "localhost");
 define("DATABASE_NAME", "form_oop");
 define("DATABASE_USER", "root");
+// si MAMP sur mac
 define("DATABASE_PASSWORD", "root");
 
